@@ -12,7 +12,10 @@ A PDF analysis application that processes documents to extract ESG (Environmenta
   - `GET /process/{file_key}` - Process uploaded PDF (SSE stream)
 
 - LlamaIndex for RAG
+
   - BM25 + Vector-Based Retrieval
+
+- Tesseract for OCR
 
 ### Frontend
 
@@ -30,6 +33,7 @@ A PDF analysis application that processes documents to extract ESG (Environmenta
 - Node.js 18+
 - npm or yarn
 - OpenAI API key
+- Tesseract OCR (for PDF text extraction)
 
 ### 1. Clone the Repository
 
