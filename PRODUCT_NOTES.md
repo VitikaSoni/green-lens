@@ -27,3 +27,4 @@
 - Streaming support – Show results as they’re generated instead of waiting for the full list.
 - Prompt editing – Let users tweak the extraction prompt if something is missed.
 - Navigation improvements – Add a way to return to the home page from the report view.
+- PDF highlighting – `react-pdf-viewer` doesn’t natively support multi-line highlighting. A workaround was added, but it may fail with certain texts and needs debugging.
