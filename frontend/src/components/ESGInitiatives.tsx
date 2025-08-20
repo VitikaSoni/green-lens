@@ -1,7 +1,7 @@
 import type { ResultType } from "../pages/Result";
 import { Button } from "./ui/button";
 import { BookOpenText } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { useIsMobile } from "../hooks/use-mobile";
 
 const ESGInitiatives = ({
   result,

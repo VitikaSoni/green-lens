@@ -1,5 +1,5 @@
 import PDFUploadArea from "@/components/PDFUploadArea";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 
 const PDFUpload = ({ onUpload }: { onUpload: (file: File) => void }) => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);

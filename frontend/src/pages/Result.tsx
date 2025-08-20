@@ -49,7 +49,6 @@ const Result = ({
       <MobileResult
         result={result}
         fileURL={fileURL}
-        jumpToPage={jumpToPage}
         removeNewLinesAndSpaces={removeNewLinesAndSpaces}
         pdfViewerRef={pdfViewerRef}
       />
@@ -91,13 +90,11 @@ const Result = ({
 const MobileResult = ({
   result,
   fileURL,
-  jumpToPage,
   removeNewLinesAndSpaces,
   pdfViewerRef,
 }: {
   result: ResultType;
   fileURL: string;
-  jumpToPage: (pageNumber: number) => void;
   removeNewLinesAndSpaces: (text: string) => string;
   pdfViewerRef: React.RefObject<PDFViewerRef | null>;
 }) => {

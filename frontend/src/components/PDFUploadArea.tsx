@@ -1,10 +1,5 @@
-import {
-  CheckIcon,
-  UploadIcon,
-  WavesIcon,
-  AlertCircleIcon,
-} from "lucide-react";
-import { useState, useRef, type RefObject, useEffect } from "react";
+import { CheckIcon, UploadIcon } from "lucide-react";
+import { useState, type RefObject } from "react";
 import type { DragEvent } from "react";
 import ErrorDialog from "./ErrorDialog";
 
@@ -20,7 +15,6 @@ const PDFUploadArea = ({
   const [isDragOver, setIsDragOver] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [isErrorDialogOpen, setIsErrorDialogOpen] = useState(false);
-  const [validationError, setValidationError] = useState<string | null>(null);
 
   const MAX_FILE_SIZE_MB = 50;
   const MAX_FILE_SIZE = MAX_FILE_SIZE_MB * 1024 * 1024; // 1MB in bytes
@@ -29,7 +23,6 @@ const PDFUploadArea = ({
     if (file.type !== "application/pdf") {
       const errorMsg = "Please select a PDF file";
       setError(errorMsg);
-      setValidationError(errorMsg);
       setIsErrorDialogOpen(true);
       // Reset the file input value so the same file can be selected again
       if (fileInputRef.current) {
@@ -41,7 +34,6 @@ const PDFUploadArea = ({
     if (file.size > MAX_FILE_SIZE) {
       const errorMsg = `File size must be less than ${MAX_FILE_SIZE_MB}MB`;
       setError(errorMsg);
-      setValidationError(errorMsg);
       setIsErrorDialogOpen(true);
       // Reset the file input value so the same file can be selected again
       if (fileInputRef.current) {
@@ -51,14 +43,12 @@ const PDFUploadArea = ({
     }
 
     setError(null);
-    setValidationError(null);
     return true;
   };
 
   const handleCloseErrorDialog = () => {
     setIsErrorDialogOpen(false);
     setError(null);
-    setValidationError(null);
     setSelectedFile(null);
   };
 
