@@ -5,6 +5,7 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     tesseract-ocr \
     libtesseract-dev \
+    poppler-utils \
     build-essential \
     gcc \
     g++ \
