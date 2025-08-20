@@ -2,6 +2,9 @@
 
 A PDF analysis application that processes documents to extract ESG (Environmental, Social, and Governance) insights using AI-powered text analysis and retrieval systems.
 
+[Product Notes](PRODUCT_NOTES.md)
+[Deployed App](https://green-lens-eta.vercel.app/)
+
 ## Tech Stack
 
 ### Backend
