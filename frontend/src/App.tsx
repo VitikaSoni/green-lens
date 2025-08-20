@@ -117,7 +117,9 @@ function App() {
 
   const handleUpload = (file: File) => {
     setState(State.PDF_PROCESSING);
-    setCurrentStep("Uploading PDF");
+    setCurrentStep(
+      "Uploading PDF (Can take extra 50s if the server was inactive)"
+    );
     setProgress(0);
     uploadPDF(file);
   };

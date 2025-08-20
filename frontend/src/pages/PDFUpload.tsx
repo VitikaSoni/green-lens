@@ -25,7 +25,7 @@ const PDFUpload = ({ onUpload }: { onUpload: (file: File) => void }) => {
     <div className="pt-0">
       <div className="  py-8 px-6 ">
         <h1 className="text-4xl md:text-4xl text-gray-700 font-extrabold text-center  mb-2 tracking-tight">
-          Sustainability Lens
+          Green Lens
         </h1>
 
         <p className="text-center mt-3 text-base text-gray-600 font-medium">
