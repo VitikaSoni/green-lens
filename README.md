@@ -36,7 +36,7 @@ A PDF analysis application that processes documents to extract ESG (Environmenta
 - Node.js 18+
 - npm or yarn
 - OpenAI API key
-- Tesseract OCR (for PDF text extraction)
+- Tesseract OCR or Docker
 
 ### 1. Clone the Repository
 
@@ -46,6 +46,20 @@ cd green-lens
 ```
 
 ### 2. Backend Setup
+
+With docker:
+
+```bash
+cd backend
+
+# Build the image
+docker build -t greenlens-backend .
+
+# Run the container
+docker run -p 8001:8000 greenlens-backend
+```
+
+Without docker:
 
 ```bash
 cd backend
