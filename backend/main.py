@@ -74,7 +74,7 @@ async def process(file_key: str):
     return StreamingResponse(event_stream(), media_type="text/event-stream")
 
 
-@app.post("/upload-pdf/")
+@app.post("/upload-pdf")
 async def upload_pdf(file: UploadFile = File(...)):
     """Upload a PDF file to Firebase Storage"""
 
