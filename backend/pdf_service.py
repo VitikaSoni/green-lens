@@ -25,8 +25,13 @@ class PDFService:
 
         # Process file content
         if await Utils.needs_ocr(file):
-            converted_file = await Utils.convert_pdf_to_searchable(file)
-            file_content = await converted_file.read()
+            try:
+                converted_file = await Utils.convert_pdf_to_searchable(file)
+                file_content = await converted_file.read()
+            except Exception as e:
+                raise Exception(
+                    f"Sorry, OCR won't work in the demo app (render.com had some issues with deploying in the docker runtime)",
+                )
         else:
             file_content = await file.read()
 

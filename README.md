@@ -52,6 +52,9 @@ With docker:
 ```bash
 cd backend
 
+# Create Dockerfile (this is done because of deployment issues with render.com)
+cp deleted-Dockerfile Dockerfile
+
 # Build the image
 docker build -t greenlens-backend .
 

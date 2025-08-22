@@ -74,11 +74,15 @@ const Result = ({
           <PDFViewer
             ref={pdfViewerRef}
             fileUrl={fileURL}
-            highliedTexts={result.esg_initiatives.map((initiative) =>
-              removeNewLinesAndSpaces(
-                initiative.evidence_statement_with_newlines
-              )
-            )}
+            highliedTexts={
+              result.esg_initiatives.length > 0
+                ? result.esg_initiatives.map((initiative) =>
+                    removeNewLinesAndSpaces(
+                      initiative.evidence_statement_with_newlines
+                    )
+                  )
+                : []
+            }
           />
         </ResizablePanel>
       </ResizablePanelGroup>

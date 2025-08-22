@@ -35,7 +35,7 @@ class RAGService:
         )
         self.splitter = TokenTextSplitter(
             chunk_size=250,
-            chunk_overlap=25,
+            chunk_overlap=20,
             separator=" ",
         )
 
@@ -52,14 +52,14 @@ class RAGService:
         )
 
     def retrieve_relevant_nodes(self, index, nodes, query):
-        bm25_retriever = BM25Retriever.from_defaults(nodes=nodes, similarity_top_k=30)
-        vector_retriever = index.as_retriever(similarity_top_k=20)
+        bm25_retriever = BM25Retriever.from_defaults(nodes=nodes, similarity_top_k=35)
+        vector_retriever = index.as_retriever(similarity_top_k=25)
 
         fusion_retriever = QueryFusionRetriever(
             [vector_retriever, bm25_retriever],
             num_queries=1,
             use_async=True,
-            similarity_top_k=40,
+            similarity_top_k=50,
         )
 
         return fusion_retriever.retrieve(query)
