@@ -35,11 +35,10 @@ A PDF analysis application that processes documents to extract ESG (Environmenta
 
 ### Prerequisites
 
-- Python 3.8+
 - Node.js 18+
 - npm or yarn
 - OpenAI API key
-- Tesseract OCR or Docker
+- Python 3.8+ and Tesseract OCR or Docker
 
 ### 1. Clone the Repository
 
