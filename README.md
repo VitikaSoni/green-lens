@@ -2,8 +2,9 @@
 
 A PDF analysis application that processes documents to extract ESG (Environmental, Social, and Governance) insights using AI-powered text analysis and retrieval systems.
 
-[Product Notes](PRODUCT_NOTES.md)
+[Demo Video](https://www.youtube.com/watch?v=dwTzye-_Ql4)
 [Deployed App](https://green-lens-eta.vercel.app/)
+[Product Notes](PRODUCT_NOTES.md)
 
 ## Tech Stack
 
@@ -51,9 +52,6 @@ With docker:
 
 ```bash
 cd backend
-
-# Create Dockerfile (this is done because of deployment issues with render.com)
-cp deleted-Dockerfile Dockerfile
 
 # Build the image
 docker build -t greenlens-backend .
